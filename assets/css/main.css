@@ -614,61 +614,58 @@ input, select, textarea {
 
 /* Form */
 
-	form {
-		margin: 0 0 2em 0;
+form {
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	position: relative;
+}
+
+	form input[type="text"],
+	form input[type="password"],
+	form input[type="email"] {
+		width: 18em;
 	}
 
-		form .message {
-			text-decoration: none;
-			-moz-transition: opacity 0.2s ease-in-out, -moz-transform 0.2s ease-in-out;
-			-webkit-transition: opacity 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
-			-ms-transition: opacity 0.2s ease-in-out, -ms-transform 0.2s ease-in-out;
-			transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
-			-moz-transform: scale(1.05);
-			-webkit-transform: scale(1.05);
-			-ms-transform: scale(1.05);
-			transform: scale(1.05);
-			height: 2.75em;
-			line-height: 2.75em;
-			opacity: 0;
+	form > * {
+		margin: 0 0 0 1em;
+	}
+
+	form > :first-child {
+		margin: 0 0 0 0;
+	}
+
+	@media screen and (max-width: 480px) {
+
+		form {
+			-moz-flex-direction: column;
+			-webkit-flex-direction: column;
+			-ms-flex-direction: column;
+			flex-direction: column;
 		}
 
-			form .message:before {
-				-moz-osx-font-smoothing: grayscale;
-				-webkit-font-smoothing: antialiased;
-				font-family: FontAwesome;
-				font-style: normal;
-				font-weight: normal;
-				text-transform: none !important;
+		form input[type="type"],
+		form input[type="password"],
+		form input[type="email"] {
+				width: 100%;
 			}
 
-			form .message:before {
-				margin-right: 0.5em;
+		form > * {
+				margin: 1.25em 0 0 0;
 			}
 
-			form .message.visible {
-				-moz-transform: scale(1);
-				-webkit-transform: scale(1);
-				-ms-transform: scale(1);
-				transform: scale(1);
-				opacity: 1;
+			form .message {
+				bottom: -1.5em;
+				font-size: 0.9em;
+				height: 1em;
+				left: 0;
+				line-height: inherit;
+				margin-top: 0;
+				position: absolute;
 			}
 
-			form .message.success {
-				color: #ff2b45;
-			}
-
-				form .message.success:before {
-					content: '\f00c';
-				}
-
-			form .message.failure {
-				color: #ff2361;
-			}
-
-				form .message.failure:before {
-					content: '\f119';
-				}
+	}
 
 	label {
 		color: #fff;
