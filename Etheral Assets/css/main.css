@@ -3353,7 +3353,8 @@ input, select, textarea {
 			-webkit-flex-basis: auto;
 			-ms-flex-basis: auto;
 			flex-basis: auto;
-			height: 50rem;
+			width: 100%;
+			height: 41rem;
 		}
 
 		.panel.banner.left {
