@@ -3346,12 +3346,14 @@ input, select, textarea {
 			flex-basis: auto;
 		}
 
+
+
 		.panel.banner .image {
 			-moz-flex-basis: auto;
 			-webkit-flex-basis: auto;
 			-ms-flex-basis: auto;
 			flex-basis: auto;
-			height: 18rem;
+			height: 50rem;
 		}
 
 		.panel.banner.left {
@@ -3418,7 +3420,7 @@ input, select, textarea {
 				position: absolute;
 				top: 0;
 				left: 0;
-				width: 100%;
+				width: auto;
 				height: 100%;
 			}
 
